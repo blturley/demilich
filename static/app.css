@@ -1,0 +1,526 @@
+@font-face {
+	font-family: 'Alagard';
+	src: url('Alagard.eot');
+	src: url('Alagard.eot?#iefix') format('embedded-opentype'), url('Alagard.woff2') format('woff2'),
+		url('Alagard.woff') format('woff'), url('alagard.ttf') format('truetype'),
+		url('Alagard.svg#Alagard') format('svg');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Minecraft';
+	src: url('Minecraft.eot');
+	src: url('Minecraft.eot?#iefix') format('embedded-opentype'), url('Minecraft.woff2') format('woff2'),
+		url('Minecraft.woff') format('woff'), url('Minecraft.ttf') format('truetype'),
+		url('Minecraft.svg#Minecraft') format('svg');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+html {
+	height: fit-content;
+}
+
+body {
+	background-image: url(dungeonbg01.png);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: black;
+	overflow: hidden;
+}
+
+.hover-grave {
+	position: absolute;
+	opacity: 0;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.hover-grave:hover {
+	opacity: 100%;
+}
+
+.grave {
+	display: inline-block;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
+
+#help-btn {
+	display: inline-block;
+	position: fixed;
+	bottom: 2vh;
+	cursor: pointer;
+}
+
+#new-char-btn {
+	display: inline-block;
+	position: fixed;
+	right: 0;
+	top: 35px;
+	cursor: pointer;
+}
+
+.dl-navbar {
+	display: inline-block;
+	position: fixed;
+	top: 0;
+}
+
+.nav-icon {
+	display: inline-block;
+	position: relative;
+	z-index: 3;
+	cursor: pointer;
+}
+
+@media (min-width: 800px) {
+	body {
+		background-size: 50vw;
+	}
+	.dl-navbar {
+		width: 35%;
+	}
+	.nav-icon {
+		width: 3.5%;
+		margin-top: 0.7%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.grave {
+		width: 15%;
+	}
+	#new-char-btn {
+		width: 13%;
+	}
+	#help-btn {
+		max-width: 6vw;
+		left: 9vw;
+	}
+	.character-bar {
+		width: 8%;
+	}
+	#character-scroll {
+		max-width: 7.5vw;
+		max-height: 91vh;
+		margin-left: 0.65vw;
+	}
+	.character-bar-icon {
+		max-width: 5.8vw;
+	}
+	#character-info-name {
+		font-size: 30px;
+	}
+	.character-info-entry {
+		font-size: 25px;
+	}
+	.dl-text {
+		font-size: 18px;
+	}
+	#info-container {
+		width: 60%;
+	}
+	.portrait-container {
+		width: 12vw;
+		height: 24vw;
+	}
+	.portrait-container {
+		width: 10vw;
+		height: 20vw;
+	}
+	.icon-container {
+		width: 8vw;
+		height: 8vw;
+	}
+	.icon-container-large {
+		width: 12vw;
+		height: 12vw;
+	}
+	.item-img-container {
+		width: 10vw;
+		height: 10vw;
+	}
+	.dl-list {
+		height: 25vw;
+	}
+	.item-box {
+		height: 30vw;
+	}
+	.dl-carousel {
+		height: 50vh;
+	}
+}
+
+@media (max-width: 800px) {
+	body {
+		background-size: 50vh;
+	}
+	.dl-navbar {
+		width: 80%;
+	}
+	.nav-icon {
+		width: 8%;
+		margin-top: 1.5%;
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+	.grave {
+		width: 25%;
+	}
+	#new-char-btn {
+		width: 23%;
+	}
+	#help-btn {
+		width: 15vw;
+		left: 17vw;
+	}
+	.character-bar {
+		width: 15%;
+	}
+	#character-scroll {
+		max-width: 13.4vw;
+		max-height: 95vh;
+		margin-left: 0.95vw;
+	}
+	.character-bar-icon {
+		width: 10vw;
+		left: 0;
+	}
+	#character-info-name {
+		font-size: 20px;
+	}
+	.character-info-entry {
+		font-size: 15px;
+	}
+	.dl-text {
+		font-size: 12px;
+	}
+	#info-container {
+		width: 80%;
+		margin-right: 3%;
+	}
+	.portrait-container {
+		width: 18vw;
+		height: 36vw;
+	}
+	.portrait-container-small {
+		width: 15vw;
+		height: 30vw;
+	}
+	.icon-container {
+		width: 15vw;
+		height: 15vw;
+	}
+	.icon-container-large {
+		width: 20vw;
+		height: 20vw;
+	}
+	.item-img-container {
+		width: 15vw;
+		height: 15vw;
+	}
+	.dl-list {
+		height: 35vh;
+	}
+	.item-box {
+		height: 49vh;
+	}
+	.dl-add-weapon-btn {
+		font-size: 12px;
+	}
+	.dl-add-item-btn {
+		font-size: 12px;
+	}
+	.dl-btn {
+		width: 25%;
+	}
+	.dl-dropdown {
+		font-size: 10px;
+	}
+	.dl-carousel {
+		height: 35vh;
+	}
+}
+
+@media (max-width: 500px) {
+	body {
+		background-position: 10vw;
+	}
+}
+
+#dl-navbar-sm-r {
+	left: 0;
+	z-index: 2;
+}
+
+#dl-navbar-lg-r {
+	right: 0;
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	z-index: 2;
+}
+
+#dl-navbar-sm-l {
+	right: 0;
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	z-index: 2;
+}
+
+#dl-navbar-lg-l {
+	left: 0;
+	z-index: 2;
+}
+
+#dl-navbar-sm-center {
+	z-index: 2;
+}
+
+#dl-navbar-lg-center {
+	z-index: 2;
+}
+
+.character-bar {
+	display: inline-block;
+	position: fixed;
+	left: 0;
+}
+
+.cb-center {
+	bottom: 25%;
+}
+
+.cb-lower {
+	bottom: 0;
+}
+
+#character-scroll {
+	position: absolute;
+	z-index: 1;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+#character-scroll::-webkit-scrollbar {
+	display: none;
+}
+
+.character-bar-icon {
+	position: relative;
+	margin-top: 3px;
+	cursor: pointer;
+}
+
+.char-bar-active {
+	border: 5px solid rgba(0, 255, 255, 0.5);
+}
+
+#info-container {
+	background-color: rgba(0, 0, 0, 0.7);
+	border: 1px solid cyan;
+	height: fit-content;
+	max-height: 80vh;
+	z-index: 4;
+	padding-bottom: 2%;
+}
+
+#character-info-name {
+	font-family: Alagard;
+	color: mediumpurple;
+	display: inline-block;
+}
+
+.portrait-container {
+	border: 2px solid rgb(93, 29, 122);
+	display: inline-block;
+	position: relative;
+	margin: 3%;
+	background-size: 100% 100%;
+}
+
+.portrait-container-small {
+	border: 2px solid rgb(93, 29, 122);
+	display: inline-block;
+	position: relative;
+	background-size: 100% 100%;
+}
+
+.icon-container {
+	border: 2px solid rgb(93, 29, 122);
+	display: inline-block;
+	position: relative;
+	margin: 3%;
+	background-size: 100% 100%;
+}
+
+.icon-container-large {
+	border: 2px solid rgb(93, 29, 122);
+	display: inline-block;
+	position: relative;
+	margin: 3%;
+	background-size: 100% 100%;
+}
+
+.item-img-container {
+	border: 2px solid rgb(93, 29, 122);
+	display: inline-block;
+	position: relative;
+	background-size: 100% 100%;
+}
+
+.character-info-entry {
+	font-family: Alagard;
+	color: mediumpurple;
+}
+
+.dl-text {
+	font-family: Minecraft;
+	color: cornflowerblue;
+}
+
+.info-carousel {
+	border: 2px solid rgb(93, 29, 122);
+	margin-right: 2%;
+	background-color: rgba(169, 189, 226, 0.15);
+}
+
+.item-li {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	cursor: pointer;
+}
+
+.dl-list {
+	border: 2px solid rgb(93, 29, 122);
+	background-color: rgba(169, 189, 226, 0.15);
+	text-align: center;
+}
+
+.dl-list-active {
+	background-color: cornflowerblue;
+	color: rebeccapurple;
+}
+
+.item-box {
+	border: 2px solid rgb(93, 29, 122);
+	background-color: rgba(169, 189, 226, 0.15);
+	margin-left: 3.5%;
+}
+
+.dl-btn {
+	border: 2px solid rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+}
+
+.dl-add-weapon-btn {
+	background-color: darkblue;
+	display: inline-block;
+	font-family: Alagard;
+	color: mediumpurple;
+}
+
+.dl-add-item-btn {
+	background-color: darkviolet;
+	display: inline-block;
+	font-family: Alagard;
+	color: mediumpurple;
+}
+
+.dl-add-ability-btn {
+	background-color: rgb(47, 30, 146);
+	display: inline-block;
+	font-family: Alagard;
+	color: mediumpurple;
+}
+
+.dl-copy-item-btn {
+	background-color: darkviolet;
+	display: inline-block;
+	font-family: Alagard;
+	color: mediumpurple;
+}
+
+.dl-kill-confirm-btn {
+	background-color: red;
+	display: inline-block;
+	font-family: Alagard;
+	color: black;
+}
+
+#deactivate-btn {
+	color: red;
+	font-family: Minecraft;
+	cursor: pointer;
+}
+
+.resurrect-btn {
+	background-color: khaki;
+	display: inline-block;
+	font-family: Alagard;
+	color: midnightblue;
+}
+
+.dl-dropdown {
+	color: rgb(168, 161, 184);
+	background-color: rgba(63, 35, 95, 0.5);
+	font-family: Alagard;
+}
+
+.dl-carousel {
+	overflow-x: hidden !important;
+}
+
+.kill-button {
+	width: 25%;
+	cursor: pointer;
+}
+
+.dl-add-form {
+	height: 62vh;
+}
+
+.dl-field {
+	width: 15vw;
+	background-color: rgba(230, 230, 250, 0.5);
+}
+
+.dl-field::placeholder {
+	color: black;
+}
+
+.graveyard-card {
+	background-color: rgba(207, 207, 207, 0.25);
+	border: 1px solid darkviolet;
+}
+
+.help-card {
+	background-color: rgba(30, 29, 46, 0.5);
+	border: 1px solid darkviolet;
+}
+
+#backstory,
+#description,
+#notes,
+#stats,
+#hirelings,
+#pets_minions {
+	height: 6vh;
+}
+
+#add-ability-form #description,
+#add-ability-form #notes,
+#add-weapon-form #description,
+#add-weapon-form #notes,
+#add-item-form #description,
+#add-item-form #notes {
+	width: 100%;
+}

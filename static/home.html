@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+    <title>Demilich</title>
+</head>
+<body>
+
+    <div>
+        <img src="navbar01.png" class="dl-navbar" id="dl-navbar-lg-l" alt="nav left">
+    </div>
+    <div>
+        <img src="navbar01.png" class="dl-navbar" id="dl-navbar-lg-r" alt="nav right">
+    </div>
+    <div class="d-flex justify-content-center">
+        <img src="navbar02.png" class="dl-navbar" id="dl-navbar-lg-center" alt="nav center">
+    </div>
+
+
+    <div class="d-flex justify-content-center" id="nav-icon-container">
+        <img src="icon01.png" class="nav-icon" id="user-nav-btn" alt="user icon">
+        <img src="icon03.png" class="nav-icon" id="character-nav-btn" alt="character icon">
+        <img src="icon02.png" class="nav-icon" id="ability-nav-btn" alt="abilities icon">
+        <img src="icon05.png" class="nav-icon" id="equipped-nav-btn" alt="equipment icon">
+        <img src="icon04.png" class="nav-icon" id="item-nav-btn" alt="items icon">
+    </div>
+
+    <div style="position: relative;" id="new-char-btn-container">
+        <img src="newcharacter01.png" id="new-char-btn" alt="new character">
+    </div>
+
+    <div style="position: relative;" id="grave-container">
+        <img src="grave02.png" class="hover-grave grave" alt="graveyard icon">
+        <img src="grave01.png" class="grave" alt="graveyard icon">
+    </div>
+
+    <div style="position: relative;width: fit-content;height: fit-content;" id="character-bar-container">
+        <img src="characterbar01.png" class="character-bar" alt="character bar">
+        <img src="characterbar01.png" class="character-bar cb-center" alt="character bar">
+        <img src="characterbar01.png" class="character-bar cb-lower" alt="character bar">
+        <div class="d-md-flex mt-2" id="character-scroll-container">
+            <div class="overflow-auto p-2 mb-3 mb-md-0 mr-md-3 bg-none" id="character-scroll">
+                <img src="charactericon01.png" class="character-bar-icon char-bar-active" alt="character icon">
+                <img src="charactericon02.png" class="character-bar-icon" alt="character icon">
+                <img src="charactericon03.png" class="character-bar-icon" alt="character icon">
+                <img src="charactericon04.png" class="character-bar-icon" alt="character icon">
+                <img src="charactericon05.png" class="character-bar-icon" alt="character icon">
+                <img src="charactericon06.png" class="character-bar-icon" alt="character icon">
+            </div>
+        </div>      
+    </div>
+
+        <div class="d-flex justify-content-center align-items-center" style="height: 90vh;">
+            <div class="container" id="info-container" style="display:none;">
+
+                <div id="user-info" class="container" style="text-align: center;display: none;">
+                    <span class="d-flex justify-content-center" style="width: 100%;">
+                    <img src="DLlogo_small.png" style="width: 25%;" alt="Demilich">
+                    </span>
+                    <br>
+                    <span class="character-info-entry">User: </span> <span class="dl-text">{{g.user.username}}</span>
+                    <br>
+                    <span class="character-info-entry">Email: </span> <span class="dl-text">{{g.user.email}}</span>
+                    <br>
+                    <br>
+                    <form action="/logout">
+                        <button class="dl-copy-item-btn">Logout</button>
+                    </form>
+                </div>
+
+                <div id="character-template-container">
+
+                    <div id="character-info" style="display:none;">
+                        <div class="row" style="position: relative;text-align: center;">
+                            <div class="col-3">
+                                <span class="my-3" id="character-info-name">Edgar Meloncamp</span>
+                                <div class="portrait-container" style="background-image: url(portrait01.png);">
+                                </div>
+                                <img class="dl-btn" id="character-edit-btn" src="editbtn.png" alt="edit">
+                                <img class="dl-btn" id="character-delete-btn" src="deletebtn.png" alt="delete">
+                            </div>
+                            <div class="col-9" style="padding-right: 2%;padding-left: 10%;">                    
+                                <span class="character-info-entry">lvl 12 Orc Warrior</span>
+                                <br>
+                                <span class="character-info-entry">Alignment: </span><span class="dl-text">Lawful Neutral</span>
+                                <br>
+                                <span class="character-info-entry">Age: </span><span class="dl-text">55</span>
+                                <div id="carouselExampleControls" class="carousel slide mt-3" data-ride="carousel" data-interval="false">
+                                    <div class="carousel-inner info-carousel dl-carousel overflow-auto">
+                                    <div class="carousel-item active">
+                                        <span class="character-info-entry">Stats</span>
+                                        <br>
+                                        <span class="dl-text" id="character-info-stats">
+                                            Strength - 20 <br>
+                                            Constitution- 15 <br>
+                                            Dexterity- 17 <br>
+                                            Intelligence- 10 <br>
+                                            Wisdom- 9 <br>
+                                            Charisma- 5
+                                        </span>
+                                        <br>
+                                        <br>
+                                        <span class="character-info-entry">Proficiencies</span>
+                                        <br>
+                                        <span class="dl-text" id="character-info-proficiencies">
+                                            Heavy Armor <br>
+                                            Two handed swords <br>
+                                            Two handed axes <br>
+                                            Athletics <br>
+                                            Intimidation <br>
+                                            Heavy Armor <br>
+                                            Two handed swords <br>
+                                            Two handed axes <br>
+                                            Athletics <br>
+                                            Intimidation
+                                        </span>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <span class="character-info-entry">Statuses</span>
+                                        <br>
+                                        <span class="dl-text" id="character-info-stats">
+                                            dysentery
+                                        </span>
+                                        <br>
+                                        <br>
+                                        <span class="character-info-entry">Languages</span>
+                                        <br>
+                                        <span class="dl-text" id="character-info-languages">
+                                            Common <br>
+                                            Orcish <br>
+                                            Goblin
+                                        </span>
+                                        <br>
+                                        <br>
+                                        <span class="character-info-entry">Traits</span>
+                                        <br>
+                                        <span class="dl-text" id="character-info-traits">
+                                            Short temper <br>
+                                            Buff <br>
+                                            Smelly
+                                        </span>
+                                        <br>
+                                        <br>
+                                        <span class="character-info-entry">Hirelings</span>
+                                        <br>
+                                        <span class="dl-text" id="character-info-hirelings">
+                                            Mr. Friendly
+                                        </span>
+                                        <br>
+                                        <br>
+                                        <span class="character-info-entry">Pets and Minions</span>
+                                        <br>
+                                        <span class="dl-text" id="character-info-hirelings">
+                                            Buhbuh
+                                        </span>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <span class="character-info-entry">Backstory</span>
+                                        <br>
+                                        <span class="dl-text" id="character-info-backstory">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, distinctio! 
+                                            Deleniti delectus harum blanditiis suscipit dolorem quam officiis id odit, qui alias, 
+                                            corrupti esse dolores libero at culpa itaque eveniet.
+                                        </span>
+                                        <br>
+                                        <br>
+                                        <span class="character-info-entry">Notes</span>
+                                        <br>
+                                        <span class="dl-text" id="character-info-notess">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                            Facere nostrum illo consequatur officia veniam tenetur alias nulla 
+                                            doloribus aspernatur voluptatibus accusamus voluptas accusantium hic, 
+                                            consequuntur quo possimus maxime suscipit soluta!
+                                        </span>
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
+                                        <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+                                            <img class="kill-button"src="killbutton01.png">
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>                
+                    </div>
+
+
+                    <div id="item-info" style="display:none;">  
+                        <div class="row" style="position: relative;text-align: center;">
+                            <div class="col-3 ml-2 mt-3 overflow-auto" style="display: inline-block;position: relative;">
+                    
+                                <div class="dm-list" id="equipped-item-list" style="display:none;">
+                                    <span class="item-li dm-list-active dl-text" data-itemtype="weapon">
+                                    Sword
+                                    </span>
+                                    <br>
+                                    <span class="item-li dl-text" data-itemtype="armor">
+                                    Plate armor
+                                    </span>
+                                    <br>
+                                    <span class="item-li dl-text" data-itemtype="armor">
+                                    Metal shield
+                                    </span>
+                                    <br>
+                                </div>
+                    
+                                <div class="dm-list" id="unequipped-item-list" style="display:none;">
+                                    <span class="item-li dm-list-active dl-text" data-itemtype="item">
+                                    Health Potion
+                                    </span>
+                                    <br>
+                                    <span class="item-li dl-text" data-itemtype="item">
+                                    Rope
+                                    </span>
+                                    <br>
+                                    <span class="item-li dl-text" data-itemtype="item">
+                                    Rations
+                                    </span>
+                                    <br>
+                                </div>
+
+                                <div class="dm-list" id="abilities-item-list" style="display:none;">
+                                    <span class="item-li dm-list-active dl-text" data-itemtype="spell">
+                                    Fairy Fire
+                                    </span>
+                                    <br>
+                                    <span class="item-li dl-text" data-itemtype="ability">
+                                    Berserk
+                                    </span>
+                                    <br>
+                                    <span class="item-li dl-text" data-itemtype="spell">
+                                    Charm Creature
+                                    </span>
+                                    <br>
+                                </div>
+                    
+                                <br>
+
+                                <div id="items-buttons" style="display:none;"> 
+                                    <button class="dl-add-weapon-btn">Add Weapon</button>
+                                    <br>
+                                    <button class="mt-3 dl-add-item-btn">Add Item</button>
+                                </div>
+
+                                <div id="abilities-buttons" style="display:none;"> 
+                                    <button class="dl-add-weapon-btn">Add Ability</button>
+                                    <br>
+                                    <button class="mt-3 dl-add-item-btn">Add Spell</button>
+                                </div>
+
+                            </div>                    
+                            <div class="col-8 ml-3 mt-3" style="display: inline-block;position: relative;">
+                                <div class="item-box overflow-auto" id="equipment-box" style="overflow-x: hidden !important;">
+
+                                    <div class="row" id="ability-box" style="position: relative;text-align: center;padding-right: 2%;">
+                                        <div class="col-4">
+                                            <div class="item-img-container mt-2" style="background-image: url(item02.png);">
+                                            </div>
+                                            <br>
+                                            <span class="character-info-entry">Damage: </span>
+                                            <br>
+                                            <span class="dl-text">1D6</span>
+                                            <br>
+                                            <span class="character-info-entry">Damage Type: </span>
+                                            <br>
+                                            <span class="dl-text">Burning</span>
+                                            <br>
+                                            <span class="character-info-entry">Range: </span>
+                                            <br>
+                                            <span class="dl-text">12 feet</span>
+                                            <br>
+                                            <span class="character-info-entry">Area of Effect: </span>
+                                            <br>
+                                            <span class="dl-text">Straight forward</span> 
+                                            <div class=" mt-1 dropdown">
+                                                <button class="copy-weapon-dropdown dl-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Copy to other character
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                  <a class="dropdown-item dl-text" href="#">Smoopy</a>
+                                                  <a class="dropdown-item dl-text" href="#">Doopy</a>
+                                                  <a class="dropdown-item dl-text" href="#">Poopy</a>
+                                                </div>
+                                              </div>
+                                        </div>
+                                        <div class="col-8 mt-3">
+                                            <img class="mx-3 dl-btn weapon-edit-btn" src="editbtn.png" alt="edit">
+                                            <img class="mx-3 dl-btn weapon-delete-btn" src="deletebtn.png" alt="delete">
+                                            <br>
+                                            <span class="character-info-entry">Minimum Level: </span>
+                                            <br>
+                                            <span class="dl-text">2</span>
+                                            <br>    
+                                            <span class="character-info-entry">School: </span>
+                                            <br>
+                                            <span class="dl-text">Destruction</span>
+                                            <br>    
+                                            <span class="character-info-entry">Description: </span>
+                                            <br>
+                                            <span class="dl-text">Lorem ipsum dolor sit amet consectetur 
+                                                adipisicing elit. Incidunt sed at neque hic praesentium culpa 
+                                                inventore est, dolorum voluptas esse, corrupti voluptates iure. 
+                                                Libero inventore molestias consectetur dicta aliquam necessitatibus!</span>
+                                            <br>
+                                            <span class="character-info-entry">Notes: </span>
+                                            <br>
+                                            <span class="dl-text">Lorem ipsum dolor sit amet consectetur, 
+                                                adipisicing elit. Voluptatibus, rem a. Deleniti asperiores earum 
+                                                veritatis exercitationem consequuntur quibusdam corporis facilis, 
+                                                explicabo doloribus nihil sunt qui facere doloremque magni esse. 
+                                                Similique?</span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="row" id="equipped-box" style="position: relative;text-align: center;padding-right: 2%;">
+                                        <div class="col-4">
+                                            <div class="item-img-container mt-2" style="background-image: url(weapon01.png);">
+                                            </div>
+                                            <br>
+                                            <span class="character-info-entry">Weapon Type: </span>
+                                            <br>
+                                            <span class="dl-text">One-handed Sword</span>
+                                            <br>
+                                            <span class="character-info-entry">Damage: </span>
+                                            <br>
+                                            <span class="dl-text">1D6</span>
+                                            <br>
+                                            <span class="character-info-entry">Damage Type: </span>
+                                            <br>
+                                            <span class="dl-text">Slicing</span>
+                                            <br>
+                                            <span class="character-info-entry">Range: </span>
+                                            <br>
+                                            <span class="dl-text">4 Feet</span>
+                                            <br>
+                                            <span class="character-info-entry">Weight: </span>
+                                            <br>
+                                            <span class="dl-text">9 Pounds</span>
+                                            <div class=" mt-1 dropdown">
+                                                <button class="copy-weapon-dropdown dl-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Copy to other character
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                  <a class="dropdown-item dl-text" href="#">Smoopy</a>
+                                                  <a class="dropdown-item dl-text" href="#">Doopy</a>
+                                                  <a class="dropdown-item dl-text" href="#">Poopy</a>
+                                                </div>
+                                              </div>
+                                        </div>
+                                        <div class="col-8 mt-3">
+                                                <img class="mx-3 dl-btn weapon-unequip-btn" src="unequipbtn.png" alt="unequip">
+                                                <img class="mx-3 dl-btn weapon-edit-btn" src="editbtn.png" alt="edit">
+                                                <img class="mx-3 dl-btn weapon-delete-btn" src="deletebtn.png" alt="delete">
+                                                <br>
+                                            <span class="character-info-entry">Condition: </span>
+                                            <br>
+                                            <span class="dl-text">Good</span>
+                                            <br>
+                                            <span class="character-info-entry">Rarity: </span>
+                                            <br>
+                                            <span class="dl-text">Common</span> 
+                                            <br>    
+                                            <span class="character-info-entry">Description: </span>
+                                            <br>
+                                            <span class="dl-text">Lorem ipsum dolor sit amet consectetur 
+                                                adipisicing elit. Incidunt sed at neque hic praesentium culpa 
+                                                inventore est, dolorum voluptas esse, corrupti voluptates iure. 
+                                                Libero inventore molestias consectetur dicta aliquam necessitatibus!</span>
+                                            <br>
+                                            <span class="character-info-entry">Notes: </span>
+                                            <br>
+                                            <span class="dl-text">Lorem ipsum dolor sit amet consectetur, 
+                                                adipisicing elit. Voluptatibus, rem a. Deleniti asperiores earum 
+                                                veritatis exercitationem consequuntur quibusdam corporis facilis, 
+                                                explicabo doloribus nihil sunt qui facere doloremque magni esse. 
+                                                Similique?</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row" id="unequipped-box" style="position: relative;text-align: center;padding-right: 2%;">
+                                        <div class="col-4">
+                                            <div class="item-img-container mt-2" style="background-image: url(item01.png);">
+                                            </div>
+                                            <br>
+                                            <span class="character-info-entry">Armor Class: </span>
+                                            <br>
+                                            <span class="dl-text">Plate</span>
+                                            <br>
+                                            <span class="character-info-entry">Weight: </span>
+                                            <br>
+                                            <span class="dl-text">10 pounds</span>
+                                            <br>
+                                            <span class="character-info-entry">Quantity: </span>
+                                            <br>
+                                            <span class="dl-text">1</span>
+                                            <br>
+                                            <span class="character-info-entry">Condition: </span>
+                                            <br>
+                                            <span class="dl-text">Fair</span>
+                                            <div class=" mt-1 dropdown">
+                                                <button class="copy-weapon-dropdown dl-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                  Copy to other character
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                  <a class="dropdown-item dl-text" href="#">Smoopy</a>
+                                                  <a class="dropdown-item dl-text" href="#">Doopy</a>
+                                                  <a class="dropdown-item dl-text" href="#">Poopy</a>
+                                                </div>
+                                              </div>
+                                        </div>
+                                        <div class="col-8 mt-3">
+                                                <img class="mx-3 dl-btn weapon-equip-btn" src="equipbtn.png" alt="equip">
+                                                <img class="mx-3 dl-btn weapon-edit-btn" src="editbtn.png" alt="edit">
+                                                <img class="mx-3 dl-btn weapon-delete-btn" src="deletebtn.png" alt="delete">
+                                                <br>
+                                            <span class="character-info-entry">Rarity: </span>
+                                            <br>
+                                            <span class="dl-text">Common</span> 
+                                            <br>    
+                                            <span class="character-info-entry">Description: </span>
+                                            <br>
+                                            <span class="dl-text">Lorem ipsum dolor sit amet consectetur 
+                                                adipisicing elit. Incidunt sed at neque hic praesentium culpa 
+                                                inventore est, dolorum voluptas esse, corrupti voluptates iure. 
+                                                Libero inventore molestias consectetur dicta aliquam necessitatibus!</span>
+                                            <br>
+                                            <span class="character-info-entry">Notes: </span>
+                                            <br>
+                                            <span class="dl-text">Lorem ipsum dolor sit amet consectetur, 
+                                                adipisicing elit. Voluptatibus, rem a. Deleniti asperiores earum 
+                                                veritatis exercitationem consequuntur quibusdam corporis facilis, 
+                                                explicabo doloribus nihil sunt qui facere doloremque magni esse. 
+                                                Similique?</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>     
+                    </div>
+
+                </div>
+
+                <div id="add-character-form" class="container" style="display:none;">
+                </div>
+
+                <div id="add-ability-form" class="container" style="display:none;">
+                </div>
+
+                <div id="add-weapon-form" class="container" style="display:none;">
+                </div>
+
+                <div id="add-item-form" class="container" style="display:none;">
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="http://unpkg.com/axios/dist/axios.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

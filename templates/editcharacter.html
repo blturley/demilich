@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-4" style="text-align: center;">
+        <div class="icon-container" id="character-icon-preview" style="background-image: url({{character.icon}});">
+        </div>
+        <div class="portrait-container" id="character-portrait-preview" style="background-image: url({{character.portrait_url}});">
+        </div>
+    </div>
+    <div class="col-8" style="text-align: center;">
+        <h3 class="character-info-entry mt-2">Edit Character:</h3>
+        <p class="dl-text">Serparate Stats and list entries with commas!</p>
+        <form action="/edit_character" method="PATCH" id="edit-char-form">   
+            {{ form.hidden_tag() }}
+            {% for field in form if field.widget.input_type != 'hidden' %}
+                {% for error in field.errors %}
+                    <span class="text-danger">{{ error }}</span>
+                {% endfor %}
+                {% if field.widget.input_type == 'checkbox'%}
+                    <br>
+                    {{field.label(style="color: white;")}}
+                    {{ field() }}
+                {% else %}
+                    {{ field(placeholder=field.label.text, class_="my-1 dl-field") }}
+                {% endif %}
+            {% endfor %}
+            <br>
+            <button style="color: cyan; background-color: rgb(44, 44, 44);" class="btn dl-text">Submit</button>
+        </form>
+        <div class="errorbox"></div>
+    </div>
+</div>

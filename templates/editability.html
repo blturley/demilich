@@ -1,0 +1,29 @@
+
+<div class="row mt-5">
+    <div class="col-4" style="text-align: center;">
+        <div class="icon-container-large" id="ability-icon-preview" style="background-image: url({{ability.image_url}});">
+        </div>
+    </div>
+    <div class="col-8" style="text-align: center;">
+        <h3 class="character-info-entry mt-2">Edit Ability:</h3>
+        <p class="dl-text">If damage changes with lvl or slot don't be afraid to list them all!</p>
+        <form action="/edit_ability" method="PATCH" id="edit-ability-form">
+            {{ form.hidden_tag() }}
+            {% for field in form if field.widget.input_type != 'hidden' %}
+                {% for error in field.errors %}
+                    <span class="text-danger">{{ error }}</span>
+                {% endfor %}
+                {% if field.widget.input_type == 'checkbox'%}
+                    <br>
+                    {{field.label(style="color: white;")}}
+                    {{ field() }}
+                {% else %}
+                    {{ field(placeholder=field.label.text, class_="my-1 dl-field") }}
+                {% endif %}
+            {% endfor %}
+            <br>
+            <button style="color: cyan; background-color: rgb(44, 44, 44);" class="btn dl-text">Submit</button>
+        </form>
+        <div class="errorbox"></div>
+    </div>
+</div>

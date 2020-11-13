@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/app.css">
+    <title>Sign Up</title>
+</head>
+<body style="background-color: black;background-image: none;overflow: auto;">
+
+    <div class="d-flex justify-content-center" style="position: relative;">
+
+        <div>
+            <img src="static/fireskull01.png" class="d-none d-xl-block ml-3" style="display: inline-block; position: fixed; left: 0; bottom: 10%;width: 15%;" alt="torchleft">
+            <img src="static/fireskull01.png" class="d-none d-sm-block d-xl-none ml-3" style="display: inline-block; position: fixed; left: 0; bottom: 10%;width: 18%;" alt="torchleft">
+        </div>
+
+        <div>
+            <img src="static/necro01.png" class="d-none d-xl-block" style="display: inline-block; position: fixed; right: 0; bottom: 0;width: 20%;" alt="torchright">
+            <img src="static/necro01.png" class="d-none d-sm-block d-xl-none" style="display: inline-block; position: fixed; right: 0; bottom: 0;width: 23%;" alt="torchright">
+        </div>
+
+            <div class="container mt-5 py-4" style="border: 1px solid cyan;width: 50%;">
+                <div class="d-flex justify-content-center" style="position: relative;">
+                    <img src="static/signupgrave02.png" class="d-none d-lg-block hover-grave" alt="DEMILICH" width="25%">
+                    <img src="static/signupgrave01.png" class="d-none d-lg-block" alt="DEMILICH" width="25%">
+                    <img src="static/signupgrave02.png" class="d-block d-lg-none hover-grave" alt="DEMILICH" width="45%">
+                    <img src="static/signupgrave01.png" class="d-block d-lg-none" alt="DEMILICH" width="45%">
+                </div>
+                <div class="container px-5" style="text-align: center;">
+                    <hr color="cyan">
+                    <form action="/signup" method="POST" id="signup-form">
+                        {{ form.hidden_tag() }}
+                        {% for field in form if field.widget.input_type != 'hidden' %}
+                            {% for error in field.errors %}
+                                <span class="text-danger">{{ error }}</span>
+                            {% endfor %}
+                            {{ field(placeholder=field.label.text, class="form-control my-5") }}
+                        {% endfor %}
+                        <button type="submit" style="color: cyan; background-color: rgb(44, 44, 44);" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+    </div>
+
+<br>
+
+<div style="text-align: center;">
+
+<span style="color: mediumpurple;">Already have an account?: <a href="/login">log in</a></span>
+
+<br>
+
+<a href="/about">What is Demilich?</a>
+
+</div>
+
+</body>
+</html>

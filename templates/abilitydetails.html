@@ -1,0 +1,55 @@
+<div class="row ml-2" style="position: relative;text-align: center;padding-right: 2%;width: 100%;">
+    <div class="col-4">
+        <div class="item-img-container mt-2" style="background-image: url({{ability.image_url}});">
+        </div>
+        <br>
+        <span class="character-info-entry">Damage: </span>
+        <br>
+        <span class="dl-text">{{ability.damage}}</span>
+        <br>
+        <span class="character-info-entry">Damage Type: </span>
+        <br>
+        <span class="dl-text">{{ability.damage_type}}</span>
+        <br>
+        <span class="character-info-entry">Range: </span>
+        <br>
+        <span class="dl-text">{{ability.ability_range}}</span>
+        <br>
+        <span class="character-info-entry">Area of Effect: </span>
+        <br>
+        <span class="dl-text">{{ability.effect_area}}</span> 
+        <div class=" mt-1 dropdown">
+            <button class="copy-weapon-dropdown dl-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Copy to other character
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              {% for character in characters %}
+                <a class="dropdown-item dl-text copy-drop" data-charid="{{character.id}}" 
+                data-itemid="{{ability.id}}" data-itemtype="ability" 
+                href="#">{{character.name}}</a>
+              {% endfor %}
+            </div>
+        </div>
+        <div class="copy-box"></div>
+    </div>
+    <div class="col-8 mt-3">
+        <img class="mx-3 dl-btn edit-btn" src="static/editbtn.png" alt="edit">
+        <img class="mx-3 dl-btn delete-btn" src="static/deletebtn.png" alt="delete">
+        <br>
+        <span class="character-info-entry">Minimum Level: </span>
+        <br>
+        <span class="dl-text">{{ability.min_level}}</span>
+        <br>    
+        <span class="character-info-entry">School: </span>
+        <br>
+        <span class="dl-text">{{ability.school}}</span>
+        <br>    
+        <span class="character-info-entry">Description: </span>
+        <br>
+        <span class="dl-text">{{ability.description}}</span>
+        <br>
+        <span class="character-info-entry">Notes: </span>
+        <br>
+        <span class="dl-text">{{ability.notes}}</span>
+    </div>
+</div>

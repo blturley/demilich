@@ -1,0 +1,195 @@
+
+<div id="character-info">
+    <div class="row" style="position: relative;text-align: center;">
+        <div class="col-3">
+            <span class="my-3" id="character-info-name">Edgar Meloncamp</span>
+            <div class="portrait-container" style="background-image: url(portrait01.png);">
+            </div>
+            <img class="dl-btn" id="character-edit-btn" src="editbtn.png" alt="edit">
+            <img class="dl-btn" id="character-delete-btn" src="deletebtn.png" alt="delete">
+        </div>
+        <div class="col-9" style="padding-right: 2%;padding-left: 10%;">                    
+            <span class="character-info-entry">lvl 12 Orc Warrior</span>
+            <br>
+            <span class="character-info-entry">Alignment: </span><span class="dl-text">Lawful Neutral</span>
+            <br>
+            <span class="character-info-entry">Age: </span><span class="dl-text">55</span>
+            <div id="carouselExampleControls" class="carousel slide mt-3" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner info-carousel dl-carousel overflow-auto">
+                <div class="carousel-item active">
+                    <span class="character-info-entry">Stats</span>
+                    <br>
+                    <span class="dl-text" id="character-info-stats">
+                        Strength - 20 <br>
+                        Constitution- 15 <br>
+                        Dexterity- 17 <br>
+                        Intelligence- 10 <br>
+                        Wisdom- 9 <br>
+                        Charisma- 5
+                    </span>
+                    <br>
+                    <br>
+                    <span class="character-info-entry">Proficiencies</span>
+                    <br>
+                    <span class="dl-text" id="character-info-proficiencies">
+                        Heavy Armor <br>
+                        Two handed swords <br>
+                        Two handed axes <br>
+                        Athletics <br>
+                        Intimidation <br>
+                        Heavy Armor <br>
+                        Two handed swords <br>
+                        Two handed axes <br>
+                        Athletics <br>
+                        Intimidation
+                    </span>
+                </div>
+                <div class="carousel-item">
+                    <span class="character-info-entry">Statuses</span>
+                    <br>
+                    <span class="dl-text" id="character-info-stats">
+                        dysentery
+                    </span>
+                    <br>
+                    <br>
+                    <span class="character-info-entry">Languages</span>
+                    <br>
+                    <span class="dl-text" id="character-info-languages">
+                        Common <br>
+                        Orcish <br>
+                        Goblin
+                    </span>
+                    <br>
+                    <br>
+                    <span class="character-info-entry">Traits</span>
+                    <br>
+                    <span class="dl-text" id="character-info-traits">
+                        Short temper <br>
+                        Buff <br>
+                        Smelly
+                    </span>
+                    <br>
+                    <br>
+                    <span class="character-info-entry">Hirelings</span>
+                    <br>
+                    <span class="dl-text" id="character-info-hirelings">
+                        Mr. Friendly
+                    </span>
+                    <br>
+                    <br>
+                    <span class="character-info-entry">Pets and Minions</span>
+                    <br>
+                    <span class="dl-text" id="character-info-hirelings">
+                        Buhbuh
+                    </span>
+                </div>
+                <div class="carousel-item">
+                    <span class="character-info-entry">Backstory</span>
+                    <br>
+                    <span class="dl-text" id="character-info-backstory">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, distinctio! 
+                        Deleniti delectus harum blanditiis suscipit dolorem quam officiis id odit, qui alias, 
+                        corrupti esse dolores libero at culpa itaque eveniet.
+                    </span>
+                    <br>
+                    <br>
+                    <span class="character-info-entry">Notes</span>
+                    <br>
+                    <span class="dl-text" id="character-info-notess">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Facere nostrum illo consequatur officia veniam tenetur alias nulla 
+                        doloribus aspernatur voluptatibus accusamus voluptas accusantium hic, 
+                        consequuntur quo possimus maxime suscipit soluta!
+                    </span>
+                </div>
+                <div class="carousel-item" style="height: 100%;">
+                    <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+                        <img class="kill-button"src="killbutton01.png">
+                    </div>
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>                
+</div>
+
+<div id="item-info">  
+    <div class="row" style="position: relative;text-align: center;">
+        <div class="col-3 ml-2 mt-3 overflow-auto" style="display: inline-block;position: relative;">
+
+            <div class="dm-list" id="equipped-item-list">
+                <span class="item-li dm-list-active dl-text" data-itemtype="weapon">
+                Sword
+                </span>
+                <br>
+                <span class="item-li dl-text" data-itemtype="armor">
+                Plate armor
+                </span>
+                <br>
+                <span class="item-li dl-text" data-itemtype="armor">
+                Metal shield
+                </span>
+                <br>
+            </div>
+
+            <div class="dm-list" id="unequipped-item-list" hidden>
+                <span class="item-li dm-list-active dl-text" data-itemtype="item">
+                Health Potion
+                </span>
+                <br>
+                <span class="item-li dl-text" data-itemtype="item">
+                Rope
+                </span>
+                <br>
+                <span class="item-li dl-text" data-itemtype="item">
+                Rations
+                </span>
+                <br>
+            </div>
+
+            <div class="dm-list" id="abilities-item-list" hidden>
+                <span class="item-li dm-list-active dl-text" data-itemtype="spell">
+                Fairy Fire
+                </span>
+                <br>
+                <span class="item-li dl-text" data-itemtype="ability">
+                Berserk
+                </span>
+                <br>
+                <span class="item-li dl-text" data-itemtype="spell">
+                Charm Creature
+                </span>
+                <br>
+            </div>
+
+            <br>
+
+            <div id="items-buttons"> 
+                <button class="dl-add-weapon-btn">Add Weapon</button>
+                <br>
+                <button class="mt-3 dl-add-item-btn">Add Item</button>
+            </div>
+
+            <div id="abilities-buttons" hidden> 
+                <button class="dl-add-weapon-btn">Add Ability</button>
+                <br>
+                <button class="mt-3 dl-add-item-btn">Add Spell</button>
+            </div>
+
+        </div>                    
+        <div class="col-8 ml-3 mt-3" style="display: inline-block;position: relative;">
+            <div class="item-box overflow-auto" id="equipment-box" style="overflow-x: hidden !important;">
+            
+
+            </div>
+        </div>
+    </div>     
+</div>

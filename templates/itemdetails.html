@@ -1,0 +1,54 @@
+<div class="row ml-2" style="position: relative;text-align: center;padding-right: 2%;width: 100%;">
+    <div class="col-4">
+        <div class="item-img-container mt-2" style="background-image: url({{item.image_url}});">
+        </div>
+        <br>
+        <span class="character-info-entry">Weight: </span>
+        <br>
+        <span class="dl-text">{{item.weight}}</span>
+        <br>
+        <span class="character-info-entry">Quantity: </span>
+        <br>
+        <span class="dl-text">{{item.quantity}}</span>
+        <br>
+        <span class="character-info-entry">Condition: </span>
+        <br>
+        <span class="dl-text">{{item.condition}}</span>
+        <br>
+        <span class="character-info-entry">Rarity: </span>
+        <br>
+        <span class="dl-text">{{item.rarity}}</span> 
+        <div class=" mt-1 dropdown">
+            <button class="copy-weapon-dropdown dl-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Copy to other character
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              {% for character in characters %}
+                <a class="dropdown-item dl-text copy-drop" data-charid="{{character.id}}" 
+                data-itemid="{{item.id}}" data-itemtype="item" 
+                href="#">{{character.name}}</a>
+              {% endfor %}
+            </div>
+        </div>
+        <div class="copy-box"></div>
+    </div>
+    <div class="col-8 mt-3">
+      {% if item.is_wearable == True %}
+        {% if item.is_equipped == True %}
+          <img class="mx-3 dl-btn unequip-btn" src="static/unequipbtn.png" alt="unequip">
+        {% else %}
+          <img class="mx-3 dl-btn equip-btn" src="static/equipbtn.png" alt="equip">
+        {% endif %}
+      {% endif %}
+          <img class="mx-3 dl-btn edit-btn" src="static/editbtn.png" alt="edit">
+          <img class="mx-3 dl-btn delete-btn" src="static/deletebtn.png" alt="delete">
+          <br>    
+        <span class="character-info-entry">Description: </span>
+        <br>
+        <span class="dl-text">{{item.description}}</span>
+        <br>
+        <span class="character-info-entry">Notes: </span>
+        <br>
+        <span class="dl-text">{{item.notes}}</span>
+    </div>
+</div>

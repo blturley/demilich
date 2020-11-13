@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/app.css">
+    <title>Demilich</title>
+</head>
+<body style="background-image: none;overflow: auto;">
+
+    <div class="container" style="text-align: center;">
+
+        <div id="reapercontainer" class="d-flex justify-content-center" style="width: 100%;">
+            <img src="/static/reaperanimated01.gif" alt="reaper" style="width: 50%;">
+        </div>
+
+        <h2 class="character-info-entry">Resurrect {{character.name}}?</h2>
+
+        <div id="container" class="d-flex justify-content-center" style="width: 100%;">
+            <form action="/resurrectcharacter/{{character.id}}" method="POST" id="res-character-form" class="mt-1 mb-3 mx-3">
+                <button class="resurrect-btn">Resurrect</button>
+            </form>
+            <form action="/" id="res-cancel-button" class="mt-1 mb-3 mx-3">
+                <button class="dl-add-ability-btn">Cancel</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

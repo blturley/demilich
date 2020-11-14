@@ -87,10 +87,10 @@ body {
 		width: 35%;
 	}
 	.nav-icon {
-		width: 40%;
+		width: 35%;
 		margin-top: 4%;
-		margin-left: 10%;
-		margin-right: 10%;
+		margin-left: 25%;
+		margin-right: 0;
 	}
 	.grave {
 		width: 15%;
@@ -164,10 +164,10 @@ body {
 		width: 80%;
 	}
 	.nav-icon {
-		width: 35%;
+		width: 40%;
 		margin-top: 5.5%;
-		margin-left: 6%;
-		margin-right: 6%;
+		margin-left: 25%;
+		margin-right: 0;
 	}
 	.grave {
 		width: 25%;

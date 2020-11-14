@@ -1,6 +1,8 @@
 # Demilich
 -alpha build 1.0
 
+### Heroku app: https://demilich.herokuapp.com/
+
 ## Program summary:
 
  Demi-Lich is an easily accessible in-browser D&D character creator and organizer. Character creation in D&D can be a pain. What with having to fill out forms like in a doctor’s office and carrying it around with you, scribbling notes to keep track of your inventory and equipment. Enter Demi-Lich: An in-browser, dedicated character creator and organizer with a sleek and intuitive interface that makes character creation a breeze. Demi-Lich saves and displays created character info along with abilities, and equipment, and uses a dungeon and dragons 5th edition api to provide optional auto-population for item, weapon, spell, and skill forms. Another notable feature is the character graveyard: a place to store your dearly departed characters and all their info (including cause of death and even a custom eulogy if you so desire). If you’re an experienced D&D player, new to the game, or are even playing a different RPG altogether; Demi-Lich is highly customizable and able to tackle all of your roleplaying character needs.

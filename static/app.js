@@ -51,7 +51,7 @@ let currequipped;
 let currunequipped;
 let currwindow;
 
-const url = process.env.baseURL || "http://localhost:3001";
+const url = "https://demilich.herokuapp.com";
 
 
 /* ------------------------CYCLE THROUGH MENUS------------------------ */

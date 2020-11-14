@@ -84,11 +84,11 @@ body {
 		background-size: 50vw;
 	}
 	.dl-navbar {
-		width: 30%;
+		width: 35%;
 	}
 	.nav-icon {
-		width: 40%;
-		margin-top: 2%;
+		width: 30%;
+		margin-top: 2.5%;
 		margin-left: 5%;
 		margin-right: 5%;
 	}
@@ -164,8 +164,8 @@ body {
 		width: 80%;
 	}
 	.nav-icon {
-		width: 45%;
-		margin-top: 2.5%;
+		width: 40%;
+		margin-top: 3%;
 		margin-left: 3%;
 		margin-right: 3%;
 	}

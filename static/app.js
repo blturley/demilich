@@ -51,7 +51,7 @@ let currequipped;
 let currunequipped;
 let currwindow;
 
-const url = "http://127.0.0.1:5000";
+const url = "https://demilich.herokuapp.com";
 
 
 /* ------------------------CYCLE THROUGH MENUS------------------------ */

@@ -686,8 +686,6 @@ $('#edit-form-container').submit("#edit-char-form", async function(e) {
         data: $('#edit-form-container #edit-char-form').serialize()
     });
 
-    await console.log(newchar);
-
     if (newchar.data.errors) {
         let errors = newchar.data.errors
         for (error in errors) {

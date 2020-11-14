@@ -8,6 +8,7 @@ from sqlalchemy.exc import IntegrityError
 import random
 import copy
 import requests
+import os
 
 CURR_USER_KEY = "curr_user"
 
@@ -15,8 +16,8 @@ app = Flask(__name__, static_folder="static")
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///demilich'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
-app.debug = True
-app.config['SECRET_KEY'] = "noneofyourbeeswax"
+app.debug = False
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'noneofyourbeeswax"\')
 
 toolbar = DebugToolbarExtension(app)
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False

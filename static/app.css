@@ -78,14 +78,6 @@ body {
 	z-index: 3;
 	cursor: pointer;
 }
-@media (min-width: 800px) {
-	.nav-icon {
-		width: 33%;
-		margin-top: 5.6%;
-		margin-left: 25%;
-		margin-right: 0;
-	}
-}
 
 @media (min-width: 800px) {
 	body {
@@ -95,8 +87,8 @@ body {
 		width: 35%;
 	}
 	.nav-icon {
-		width: 25vh;
-		margin-top: 2vh;
+		width: 5vw;
+		margin-top: 1vh;
 		margin-left: 25%;
 		margin-right: 0;
 	}

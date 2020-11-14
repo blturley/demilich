@@ -51,7 +51,7 @@ let currequipped;
 let currunequipped;
 let currwindow;
 
-const url = "http://127.0.0.1:5000";
+const url = process.env.baseURL || "http://localhost:3001";
 
 
 /* ------------------------CYCLE THROUGH MENUS------------------------ */
@@ -932,9 +932,7 @@ $iteminfo.on("click", ".copy-drop", async function(event) {
     let itemid = $targ.attr("data-itemid");
     let itemtype = $targ.attr("data-itemtype");
 
-    /* await axios.post(`${url}/copyitem`, {data:{ charid, itemid, itemtype }}); */
-
-    resp = await axios.get(`http://127.0.0.1:5000/copyitem`, { params: { charid, itemid, itemtype } });
+    resp = await axios.get(`${url}/copyitem`, { params: { charid, itemid, itemtype } });
 
     $("#item-info .copy-box").html("<span class='dl-text' style='color: green;'>Copy successful!</span>")
 });

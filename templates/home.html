@@ -825,11 +825,11 @@
 
                 <!--                           ----------GRAVEYARD----------                           -->
 
-                <div id="graveyard-container" class="container row overflow-auto dl-add-form" style="display:none; text-align: center;">
+                <div id="graveyard-container" class="container row dl-add-form" style="display:none; text-align: center;overflow-y: auto;">
                     <div class="d-flex justify-content-center mt-2" id="grave-cards" style="width: 100%;">
                         {% for character in characters %}
                             {% if character.is_dead %}
-                            <div class="xl-col-3 lg-col-4 md-col-6 sm-col-12">
+                            <div class="xl-col-3 lg-col-4 md-col-6 sm-col-12 xs-col-12">
                                 <div class="card graveyard-card mt-2 ml-2 d-flex justify-content-center" style="width: 15rem;position: relative;">
                                     <img src="static/grave01.png" alt="{{character.name}}" class="mt-2" style="width: 50%;position: relative;left: 25%;">
                                     <div class="card-body" style="text-align: center;">

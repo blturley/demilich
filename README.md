@@ -24,6 +24,10 @@
 - Animation for background and changing buttons.
 - Class information windows and forms.
 
+## Who is Edgar Meloncamp? This is not my character.
+
+Edgar is a placeholder character that exists before your characters are selected. If you see him it means for some reason your browser is not communicating properly with the database. If this happens make sure your connection is secure and the url has https instead of http.
+
 ## Languages and Software used:
 - html
 - css

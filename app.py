@@ -131,10 +131,17 @@ def user_login():
 
 @app.route("/logout", methods=["POST"])
 def logout_user():
-    """logout user."""
+    """Logout user."""
     if CURR_USER_KEY in session:
         del session[CURR_USER_KEY]
     return redirect("/login")
+
+
+@app.route("/about")
+def show_about_page():
+    """Show about page."""
+    
+    return render_template('about.html')
 
 
 @app.route("/character/<int:char_id>", methods=["GET"])

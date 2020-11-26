@@ -41,6 +41,7 @@ const $graveyard = $('#graveyard-container')
 const $helpbtn = $('#help-btn')
 const $helpinfo = $('#help-info')
 const $introinfo = $('#intro-info')
+const $nocharinfo = $('#no-character-info')
 const $deactivateshow = $('#deactivate-btn')
 const $accountdeletemenu = $('#account-delete-buttons')
 const $accountdeletecancel = $('#account-delete-cancel')
@@ -77,6 +78,7 @@ function hideAll() {
     $graveyard.hide();
     $helpinfo.hide();
     $introinfo.hide();
+    $nocharinfo.hide();
     $accountdeletemenu.hide();
 };
 
@@ -97,6 +99,10 @@ $charnav.on("click", function() {
         $charinfo.show();
         currwindow = "character";
     }
+    else {
+        hideAll();
+        $nocharinfo.show();
+    }
 });
 $abilitynav.on("click", function() {
     if (currcharacter) {
@@ -106,6 +112,10 @@ $abilitynav.on("click", function() {
         $abilitieslist.show();
         $abilitybox.show();
         currwindow = "ability";
+    }
+    else {
+        hideAll();
+        $nocharinfo.show();
     }
 });
 $equipnav.on("click", function() {
@@ -117,6 +127,10 @@ $equipnav.on("click", function() {
         $equippedbox.show();
         currwindow = "equipped";
     }
+    else {
+        hideAll();
+        $nocharinfo.show();
+    }
 });
 $itemnav.on("click", function() {
     if (currcharacter) {
@@ -126,6 +140,10 @@ $itemnav.on("click", function() {
         $itemsbtns.show();
         $unequippedbox.show();
         currwindow = "unequipped";
+    }
+    else {
+        hideAll();
+        $nocharinfo.show();
     }
 });
 $newcharbtn.on("click", function() {

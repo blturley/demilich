@@ -101,6 +101,7 @@ $charnav.on("click", function() {
     }
     else {
         hideAll();
+        $infocontainer.hide();
         $nocharinfo.show();
     }
 });
@@ -115,6 +116,7 @@ $abilitynav.on("click", function() {
     }
     else {
         hideAll();
+        $infocontainer.hide();
         $nocharinfo.show();
     }
 });
@@ -129,6 +131,7 @@ $equipnav.on("click", function() {
     }
     else {
         hideAll();
+        $infocontainer.hide();
         $nocharinfo.show();
     }
 });
@@ -143,6 +146,7 @@ $itemnav.on("click", function() {
     }
     else {
         hideAll();
+        $infocontainer.hide();
         $nocharinfo.show();
     }
 });

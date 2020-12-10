@@ -977,28 +977,29 @@ $(".spell-drop").on("click", async function(event) {
     else {
         await $('#add-ability-form #effect_area').val("N/A");
     }
-
-    if (resp.data.damage.damage_at_character_level){
-        let str = "damage at character level,";
-        for (let val in resp.data.damage.damage_at_character_level){
-            str += val;
-            str += " ";
-            str += resp.data.damage.damage_at_character_level[val];
-            str += ",";
-            str += " ";
+    if (resp.data.damage){
+        if (resp.data.damage.damage_at_character_level){
+            let str = "damage at character level,";
+            for (let val in resp.data.damage.damage_at_character_level){
+                str += val;
+                str += " ";
+                str += resp.data.damage.damage_at_character_level[val];
+                str += ",";
+                str += " ";
+            }
+            await $('#add-ability-form #damage').val(str);
         }
-        await $('#add-ability-form #damage').val(str);
-    }
-    else if (resp.data.damage.damage_at_slot_level){
-        let str = "damage at slot level,";
-        for (let val in resp.data.damage.damage_at_slot_level){
-            str += val;
-            str += " ";
-            str += resp.data.damage.damage_at_slot_level[val];
-            str += ",";
-            str += " ";
+        else if (resp.data.damage.damage_at_slot_level){
+            let str = "damage at slot level,";
+            for (let val in resp.data.damage.damage_at_slot_level){
+                str += val;
+                str += " ";
+                str += resp.data.damage.damage_at_slot_level[val];
+                str += ",";
+                str += " ";
+            }
+            await $('#add-ability-form #damage').val(str);
         }
-        await $('#add-ability-form #damage').val(str);
     }
     else if (resp.data.heal_at_slot_level){
         let str = "heal at slot level,";

@@ -72,8 +72,11 @@ def home_page():
     spells_json = spells.json()
     skills_json = skills.json()
 
+    randnum = random.randint(1, 5000)
+
     return render_template("home.html", form1=form1, form2=form2, form3=form3, form4=form4, characters=characters,
-                        weapons=weapons_json, armor=armor_json, gear=gear_json, symbols=symbols_json, tools=tools_json, spells=spells_json, skills=skills_json)
+                        weapons=weapons_json, armor=armor_json, gear=gear_json, symbols=symbols_json, tools=tools_json,
+                        spells=spells_json, skills=skills_json, randnum=randnum)
 
 
 @app.route("/signup", methods=["GET", "POST"])

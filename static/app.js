@@ -36,6 +36,7 @@ const $currcharportrait = $("#curr-character-portrait");
 const $chardeleteshowbtn = $('#character-delete');
 const $chardeletemenu = $('#character-delete-buttons');
 const $charsubmitdelete = $("#character-delete-submit");
+const $charsubmitcancel = $("#character-delete-no");
 const $characterbar = $('#character-bar-container')
 const $graveyard = $('#graveyard-container')
 const $helpbtn = $('#help-btn')
@@ -82,12 +83,6 @@ function hideAll() {
     $accountdeletemenu.hide();
 };
 
-$charscroll.on("click", ".character-bar-icon", function() {
-    hideAll();
-    $infocontainer.show();
-    $charinfo.show();
-    currwindow = "character";
-});
 $usernav.on("click", function() {
     hideAll();
     $infocontainer.show();
@@ -328,12 +323,16 @@ $characterbar.on("click", ".character-bar-icon", async function(event) {
     $targ = $(event.target);
     $targ.addClass('char-bar-active');
     currcharacter = await axios.get(`${url}/character/${$targ.attr("data-id")}`);
+    hideAll();
     await changecharinfo(currcharacter.data.character);
     await changeabilitieslist(currcharacter);
     await changeitemslists(currcharacter);
     $abilitybox.html("");
     $equippedbox.html("");
     $unequippedbox.html("");
+    $infocontainer.show();
+    $charinfo.show();
+    currwindow = "character";
 });
 
 
@@ -438,6 +437,14 @@ $charsubmitdelete.click(async function(e) {
 });
 
 
+/* ------------------------CANCEL DELETE CHARACTER------------------------ */
+
+$charsubmitcancel.click(async function(e) {
+    hideAll();
+    $infocontainer.show();
+    $charinfo.show();
+});
+
 
 /* ------------------------SUBMIT DELETE ABILITY/ITEM------------------------ */
 
@@ -528,11 +535,11 @@ $('#add-char-form').submit(async function(e) {
         return;
     }
 
-    $characterbaricons.removeClass('char-bar-active');
+    $("#character-scroll .character-bar-icon").removeClass('char-bar-active');
 
     await $('#character-scroll').append(
     `<img src="${newchar.data.icon}" class="character-bar-icon char-bar-active" 
-    alt="character icon" data-id="${newchar.data.id}"></img>)`)
+    alt="character icon" data-id="${newchar.data.id}">`)
 
     hideAll();
 

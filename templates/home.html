@@ -830,8 +830,8 @@
 
                 <!--                           ----------GRAVEYARD----------                           -->
 
-                <div id="graveyard-container" class="container row dl-add-form" style="display:none; text-align: center;overflow-y: auto;width: 100%;">
-                    <div class="d-flex justify-content-center mt-2" id="grave-cards" style="width: 100%;">
+                <div id="graveyard-container" class="container dl-add-form" style="display:none; text-align: center;overflow-y: auto;width: 100%;">
+                    <div class="d-flex justify-content-center mt-2 row" id="grave-cards" style="width: 100%;">
                         {% for character in characters %}
                             {% if character.is_dead %}
                             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-xs-12" style="width: 100%;">

@@ -159,7 +159,6 @@ body {
 @media (max-width: 800px) {
 	body {
 		background-size: 50vh;
-		background-position: center center fixed !important;
 	}
 	.dl-navbar {
 		width: 80%;
@@ -250,7 +249,7 @@ body {
 
 @media (max-width: 500px) {
 	body {
-		background-position: center center fixed !important;
+		background-position: 10vw;
 	}
 }
 

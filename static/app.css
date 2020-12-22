@@ -79,12 +79,6 @@ body {
 	cursor: pointer;
 }
 
-@media (max-width: 500px) {
-	body {
-		background-position: 10vw;
-	}
-}
-
 @media (min-width: 800px) {
 	body {
 		background-size: 50vw;
@@ -165,6 +159,7 @@ body {
 @media (max-width: 800px) {
 	body {
 		background-size: 50vh;
+		background-position: 10vw;
 	}
 	.dl-navbar {
 		width: 80%;

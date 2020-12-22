@@ -31,7 +31,6 @@ html {
 }
 
 body {
-	background-image: url(dungeonbg01.png);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -88,6 +87,7 @@ body {
 @media (min-width: 800px) {
 	body {
 		background-size: 50vw;
+		background-image: url(dungeonbg01.png);
 	}
 	.dl-navbar {
 		width: 35%;
@@ -165,6 +165,7 @@ body {
 @media (max-width: 800px) {
 	body {
 		background-size: 50vh;
+		background-image: url(dungeonbg01.png);
 	}
 	.dl-navbar {
 		width: 80%;

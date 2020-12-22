@@ -250,8 +250,6 @@ body {
 @media (max-width: 500px) {
 	body {
 		background-position: 10vw;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
 	}
 }
 

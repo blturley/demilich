@@ -25,10 +25,10 @@ html {
 }
 
 body {
-	background-position: 10vw 25%;
 	background-image: url(dungeonbg01.png);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+	background-position: center;
 	background-color: black;
 	overflow: hidden;
 }
@@ -82,7 +82,6 @@ body {
 @media (min-width: 800px) {
 	body {
 		background-size: 50vw;
-		background-position: center;
 	}
 	.dl-navbar {
 		width: 35%;
@@ -160,7 +159,6 @@ body {
 @media (max-width: 800px) {
 	body {
 		background-size: 50vh;
-		background-position: center;
 	}
 	.dl-navbar {
 		width: 80%;
@@ -251,7 +249,13 @@ body {
 
 @media (max-width: 500px) {
 	body {
-		background-position: 10vw center;
+		background-position: 10vw 25%;
+	}
+}
+
+@media (max-width: 500px) {
+	.mobilebackground {
+		background-position: 10vw center !important;
 	}
 }
 

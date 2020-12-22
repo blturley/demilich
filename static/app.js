@@ -81,6 +81,7 @@ function hideAll() {
     $introinfo.hide();
     $nocharinfo.hide();
     $accountdeletemenu.hide();
+    mobileBgFix();
 };
 
 $usernav.on("click", function() {
@@ -1216,3 +1217,12 @@ $(".item-drop").on("click", async function(event) {
         await $('#add-item-form #notes').val("Cost: " + res.cost.quantity + res.cost.unit);
     }
 });
+
+
+/* ------------------------Mobile Background Fix------------------------ */
+
+function mobileBgFix() {
+    if(!$("body").hasClass("mobilebackground")){
+        $("body").addClass("mobilebackground");
+     }
+};

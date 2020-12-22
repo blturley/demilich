@@ -79,6 +79,12 @@ body {
 	cursor: pointer;
 }
 
+@media (max-width: 500px) {
+	body {
+		background-position: 10vw;
+	}
+}
+
 @media (min-width: 800px) {
 	body {
 		background-size: 50vw;
@@ -244,12 +250,6 @@ body {
 	}
 	.dl-carousel {
 		height: 35vh;
-	}
-}
-
-@media (max-width: 500px) {
-	body {
-		background-position: 10vw;
 	}
 }
 

@@ -248,7 +248,7 @@ body {
 }
 
 @media (max-width: 500px) {
-	body {
+	.backgroundmobile {
 		background-position: 10vw;
 	}
 }

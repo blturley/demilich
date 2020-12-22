@@ -250,6 +250,7 @@ body {
 @media (max-width: 500px) {
 	body {
 		background-position: 10vw;
+		background-image: url("dungeonbg02.png");
 	}
 }
 

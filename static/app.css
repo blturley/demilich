@@ -24,6 +24,12 @@ html {
 	height: fit-content;
 }
 
+@media (max-width: 500px) {
+	body {
+		background-image: url("dungeonbg02.png");
+	}
+}
+
 body {
 	background-image: url(dungeonbg01.png);
 	background-attachment: fixed;
@@ -244,13 +250,6 @@ body {
 	}
 	.dl-carousel {
 		height: 35vh;
-	}
-}
-
-@media (max-width: 500px) {
-	body {
-		background-position: 10vw;
-		background-image: url("dungeonbg02.png");
 	}
 }
 

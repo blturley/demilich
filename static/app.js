@@ -1216,11 +1216,3 @@ $(".item-drop").on("click", async function(event) {
         await $('#add-item-form #notes').val("Cost: " + res.cost.quantity + res.cost.unit);
     }
 });
-
-
-/* ------------------------REPOSITION BACKGROUND ON MOBILE------------------------ */
-
-$( document ).ready(function() {
-    hideAll();
-    $introinfo.show();
-});

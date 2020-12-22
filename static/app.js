@@ -1221,5 +1221,5 @@ $(".item-drop").on("click", async function(event) {
 /* ------------------------REPOSITION BACKGROUND ON MOBILE------------------------ */
 
 $( document ).ready(function() {
-    $('body').addClass("backgroundmobile")
+    $('body').css("background-position", "center");
 });

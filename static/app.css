@@ -247,6 +247,12 @@ body {
 	}
 }
 
+@media (max-width: 500px) {
+	body {
+		background-position: 10vw;
+	}
+}
+
 #dl-navbar-sm-r {
 	left: 0;
 	z-index: 2;

@@ -25,6 +25,7 @@ html {
 }
 
 body {
+	background-image: url(dungeonbg01.png);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -78,20 +79,9 @@ body {
 	cursor: pointer;
 }
 
-@media (max-width: 500px) {
-	body {
-		background: url("dungeonbg02.png") no-repeat center center fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-	}
-}
-
 @media (min-width: 800px) {
 	body {
 		background-size: 50vw;
-		background-image: url(dungeonbg01.png);
 	}
 	.dl-navbar {
 		width: 35%;
@@ -169,7 +159,6 @@ body {
 @media (max-width: 800px) {
 	body {
 		background-size: 50vh;
-		background-image: url(dungeonbg01.png);
 	}
 	.dl-navbar {
 		width: 80%;
@@ -255,6 +244,12 @@ body {
 	}
 	.dl-carousel {
 		height: 35vh;
+	}
+}
+
+@media (max-width: 500px) {
+	body {
+		background-position: 10vw;
 	}
 }
 

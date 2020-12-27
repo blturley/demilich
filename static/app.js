@@ -81,13 +81,13 @@ function hideAll() {
     $introinfo.hide();
     $nocharinfo.hide();
     $accountdeletemenu.hide();
-    mobileBgFix();
 };
 
 $usernav.on("click", function() {
     hideAll();
     $infocontainer.show();
     $userinfo.show();
+    mobileBgFix();
 });
 $charnav.on("click", function() {
     if (currcharacter) {
@@ -150,6 +150,7 @@ $newcharbtn.on("click", function() {
     hideAll();
     $infocontainer.show();
     $addcharform.show();
+    mobileBgFix();
 });
 $addabilitybtn.on("click", function() {
     hideAll();
@@ -175,6 +176,7 @@ $helpbtn.on("click", function() {
     hideAll();
     $infocontainer.show();
     $helpinfo.show();
+    mobileBgFix();
 });
 $deactivateshow.on("click", function() {
     hideAll();
@@ -198,6 +200,7 @@ $gravebtn.on("click", function() {
     }
     $graveyard.show();
     $infocontainer.show();
+    mobileBgFix();
 })
 
 
@@ -334,6 +337,7 @@ $characterbar.on("click", ".character-bar-icon", async function(event) {
     $infocontainer.show();
     $charinfo.show();
     currwindow = "character";
+    mobileBgFix();
 });
 
 
